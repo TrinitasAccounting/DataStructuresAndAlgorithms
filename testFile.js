@@ -119,22 +119,105 @@
 // Questions 4______________________________________________________________________
 // Given two arrays return true or false if the arrays contain a common element
 
-function commonElement(array1, array2) {
-    let set1 = new Set();
-    for (let i = 0; i < array1.length; i++) {
-        set1.add(array1[i])
-    }
-    console.log(set1);
+// function commonElement(array1, array2) {
+//     let set1 = new Set();
+//     if (array1.length < 2 || array2.length < 2) {
+//         return console.log('not an array')
+//     }
+//     else {
+//         for (let i = 0; i < array1.length; i++) {
+//             set1.add(array1[i])
+//         }
+//         console.log(set1);
 
-    for (let j = 0; j < array2.length; j++) {
-        if (set1.has(array2[j])) {
-            return console.log(true)
-        }
-        // else {
-        //     return console.log(false)
-        // }
-    }
-    return console.log(false)
-}
+//         for (let j = 0; j < array2.length; j++) {
+//             if (set1.has(array2[j])) {
+//                 return console.log(true)
+//             }
+//             // else {
+//             //     return console.log(false)
+//             // }
+//         }
 
-commonElement([1, 2, 3], [4, 5, 3])
+//     }
+//     return console.log(false)
+// }
+
+// commonElement(2, [4, 5, 3])
+
+
+// function commonItemCheck(array1, array2) {
+//     let newObject1 = {};
+//     for (let i = 0; i < array1.length; i++) {
+//         newObject1[array1[i]] = true
+//     }
+//     console.log(newObject1)
+
+//     for (let j = 0; j < array2.length; j++) {
+//         if (newObject1[array2[j]]) {
+//             return console.log(true)
+//         }
+//     }
+//     return console.log(false)
+// }
+
+// commonItemCheck([1, 2, 3], [4, 5, 6])
+
+
+
+
+// Question 5 _______________________________________________________
+// Medium difficulty, if a matrix row or column contains a zero. Then 
+// set that entire row to 0's and the entire column to 0's
+
+// function setZeros(matrix) {
+// let rowArray = []
+// let columnArray = []
+// // let matrixLength = matrix[0].length
+// for(let i = 0; i < matrix[0].length; i++) {
+//     columnArray.push(true)
+// }
+
+// for(let i = 0; i < matrix.length; i++) {
+//     for (j = 0; j < matrix[i].length; j++){
+//         if(columnArray[j] === false) {
+//             matrix[i][j] = 0
+//         }
+//         if(matrix[i][j] === 0) {
+//             columnArray[j] = false;
+
+//         }
+//     }
+// }
+
+// Best Answer__________________________________________
+//     let rows = new Set();
+//     let columns = new Set();
+
+//     for (let i = 0; i < matrix.length; i++) {
+//         for (let j = 0; j < matrix[i].length; j++) {
+//             if (matrix[i][j] === 0) {
+//                 rows.add(i)
+//                 columns.add(j)
+//             }
+//         }
+//     }
+
+//     for (let i = 0; i < matrix.length; i++) {
+//         for (let j = 0; j < matrix[i].length; j++) {
+//             if (rows.has(i)) {
+//                 matrix[i][j] = 0
+//             }
+
+//             if (columns.has(j)) {
+//                 matrix[i][j] = 0
+//             }
+//         }
+//     }
+
+//     return console.log(matrix)
+
+
+// }
+
+// setZeros([[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]])
