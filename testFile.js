@@ -221,3 +221,20 @@
 // }
 
 // setZeros([[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]])
+
+
+
+
+// Question 6______________________________________________________________________________
+// Receive an input and calculate how much payments would be 
+
+function paymentsCalculator(total, numberOfPayments, interestRate) {
+    interestPaid = total * ((interestRate / 100) / 12);
+    monthlyPrinciplePayments = total / numberOfPayments;
+
+    totalMonthlyPayments = monthlyPrinciplePayments + interestPaid;
+
+    return (console.log(totalMonthlyPayments))
+}
+
+paymentsCalculator(300, 4, 7.5)
