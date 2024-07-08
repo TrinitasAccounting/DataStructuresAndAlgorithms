@@ -251,38 +251,56 @@
 // then take the largest value, multiply their distance from each other by height of others. Store as a value 
 // continue down the array until all are multiplied
 
-function mostWater(array) {
-    let largestWater = 0;
-    let firstCalculator = 0;
-    let secondCalculator = 0;
+// function mostWater(array) {
+//     let largestWater = 0;
+//     let firstCalculator = 0;
+//     let secondCalculator = 0;
 
-    // sortedArray = array.sort((a, b) => { return (b - a) });
+//     // sortedArray = array.sort((a, b) => { return (b - a) });
 
-    for (let i = 0; i < array.length; i++) {
-        for (j = 0; j < array.length; j++) {
-            if (array[i] > array[j]) {
-                // if((sortedArray[i] * Math.abs(i - j)) > water) {
-                //     water = 
-                // }
-                firstCalculator = (array[j] * Math.abs(i - j));
-                if (firstCalculator > largestWater) {
-                    largestWater = firstCalculator
-                }
-            }
-            else if (array[i] < array[j]) {
-                // if((sortedArray[i] * Math.abs(i - j)) > water) {
-                //     water = 
-                // }
-                secondCalculator = (array[i] * Math.abs(i - j));
-                if (secondCalculator > largestWater) {
-                    largestWater = secondCalculator
-                }
-            }
+//     for (let i = 0; i < array.length; i++) {
+//         for (j = 0; j < array.length; j++) {
+//             if (array[i] > array[j]) {
+//                 // if((sortedArray[i] * Math.abs(i - j)) > water) {
+//                 //     water = 
+//                 // }
+//                 firstCalculator = (array[j] * Math.abs(i - j));
+//                 if (firstCalculator > largestWater) {
+//                     largestWater = firstCalculator
+//                 }
+//             }
+//             else if (array[i] < array[j]) {
+//                 // if((sortedArray[i] * Math.abs(i - j)) > water) {
+//                 //     water = 
+//                 // }
+//                 secondCalculator = (array[i] * Math.abs(i - j));
+//                 if (secondCalculator > largestWater) {
+//                     largestWater = secondCalculator
+//                 }
+//             }
+//         }
+//     }
+//     console.log(largestWater);
+
+
+// }
+
+// mostWater([1, 8, 6, 2, 5, 4, 8, 3, 7])
+
+
+
+// Question 8_________________________________________________________________
+// Finding the longest prefix string
+
+function longestCommonPrefix(strs) {
+    let commonString = '';
+    let length = strs.length - 1;
+
+    for (let i = 0; i < strs.length; i++) {
+        for (let j = 0; j < strs.length; j++) {
+            2 + 2
         }
     }
-    console.log(largestWater);
-
-
 }
 
-mostWater([1, 8, 6, 2, 5, 4, 8, 3, 7])
+
