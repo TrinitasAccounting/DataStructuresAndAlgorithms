@@ -1,0 +1,30 @@
+.TimerDiv {
+    position: relative;
+    top: 300px;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+}
+
+.Timer {
+    position: absolute;
+    left: 35%;
+    top: 90px;
+    text-align: center;
+}
+
+.count-value {
+    position: absolute;
+    left: 50%;
+    color: rgb(230, 230, 2);
+    /* font-size: x-large; */
+    font-size: 30px;
+}
+
+.title {
+    position: relative;
+    top: 300px;
+    left: 47%;
+    font-size: 20px;
+}

@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import TimerAndClicks from './TimerAndClicks';
 
 import { useState } from 'react';
 
@@ -82,9 +83,7 @@ function App() {
 
 
       <div>
-        <ul>
-          {listOfPayments}
-        </ul>
+        <TimerAndClicks />
       </div>
     </div>
   );

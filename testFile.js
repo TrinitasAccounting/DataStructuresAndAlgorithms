@@ -391,27 +391,27 @@
 // Question 11_____________________________________________
 // First recurring character in an array
 
-function recurringCharacter(array1) {
-    // check if an array and length
-    if (!(array1 instanceof Array) || array1.length < 2) {
-        return ('Array 1 is not an array or is only 1 character long')
-    }
+// function recurringCharacter(array1) {
+//     // check if an array and length
+//     if (!(array1 instanceof Array) || array1.length < 2) {
+//         return ('Array 1 is not an array or is only 1 character long')
+//     }
 
-    // create a new set
-    let previousCharacters = new Set();
+//     // create a new set
+//     let previousCharacters = new Set();
 
-    // loop through and push characters to a set. Then return the first 'true' for .has()
-    for (let i = 0; i < array1.length; i++) {
-        if (previousCharacters.has(array1[i])) {
-            return array1[i]
-        }
-        else {
-            previousCharacters.add(array1[i])
-        }
+//     // loop through and push characters to a set. Then return the first 'true' for .has()
+//     for (let i = 0; i < array1.length; i++) {
+//         if (previousCharacters.has(array1[i])) {
+//             return array1[i]
+//         }
+//         else {
+//             previousCharacters.add(array1[i])
+//         }
 
-    }
+//     }
 
-    return 'undefined';
-}
+//     return 'undefined';
+// }
 
-console.log(recurringCharacter([2, 5, 1]))
+// console.log(recurringCharacter([2, 5, 1]))
