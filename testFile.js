@@ -308,28 +308,110 @@
 // Question 9___________________________________________________
 // Reverse a String
 
-function reverse(str) {
-    if (typeof str !== 'string') {
-        return ('Not a String, Please try again')
+// function reverse(str) {
+//     if (typeof str !== 'string') {
+//         return ('Not a String, Please try again')
+
+//     }
+
+//     // split the string
+//     let splitString = str.split('');
+
+//     // loop through the split and reverse
+//     let reversedSplitString = []
+//     for (let i = splitString.length - 1; i >= 0; i--) {
+//         reversedSplitString.push(splitString[i])
+//     }
+//     // console.log(reversedSplitString);
+
+//     // join the string again
+//     let joinedString = reversedSplitString.join('')
+
+//     return joinedString
+// }
+
+// console.log(reverse([1, 2, 3]));
+
+
+
+// Question 10_____________________________________-
+// Merge two sorted arrays
+
+
+// const mergeSortedArrays = (array1, array2) => {
+//     // check that both are arrays
+//     if (!(array1 instanceof Array) || !(array2 instanceof Array) || array1.length < 2 || array2.length < 2) {
+//         return ('Both props are not an array')
+//     }
+
+// merge them with spread operator 
+// let fullArray = [...array1, ...array2];
+
+// // sort function 
+// let sortedFullArray = fullArray.sort((a, b) => a - b)
+
+// return sortedFullArray
+// _______________________________________
+
+
+//     let mergedArray = []
+//     let array1Counter = 0;
+//     let array2Counter = 0;
+
+//     for (let i = 0; i < Math.max(array1.length, array2.length); i++) {
+
+//         let array1Item = array1[array1Counter];
+//         let array2Item = array2[array2Counter];
+
+//         console.log(array1Item)
+//         console.log(array2Item)
+
+//         if (array1Item < array2Item) {
+//             mergedArray.push(array1Item)
+//             array1Counter = array1Counter + 1
+
+//         }
+//         else {
+//             mergedArray.push(array2Item)
+//             array2Counter = array2Counter + 1
+
+//         }
+//     }
+
+//     return mergedArray
+
+// }
+
+// console.log(mergeSortedArrays([3, 56, 7, 5], [31, 6, 30]))
+
+
+
+
+
+// Question 11_____________________________________________
+// First recurring character in an array
+
+function recurringCharacter(array1) {
+    // check if an array and length
+    if (!(array1 instanceof Array) || array1.length < 2) {
+        return ('Array 1 is not an array or is only 1 character long')
+    }
+
+    // create a new set
+    let previousCharacters = new Set();
+
+    // loop through and push characters to a set. Then return the first 'true' for .has()
+    for (let i = 0; i < array1.length; i++) {
+        if (previousCharacters.has(array1[i])) {
+            return array1[i]
+        }
+        else {
+            previousCharacters.add(array1[i])
+        }
 
     }
 
-    // split the string
-    let splitString = str.split('');
-
-    // loop through the split and reverse
-    let reversedSplitString = []
-    for (let i = splitString.length - 1; i >= 0; i--) {
-        reversedSplitString.push(splitString[i])
-    }
-    // console.log(reversedSplitString);
-
-    // join the string again
-    let joinedString = reversedSplitString.join('')
-
-    return joinedString
+    return 'undefined';
 }
 
-console.log(reverse([1, 2, 3]));
-
-
+console.log(recurringCharacter([2, 5, 1]))
