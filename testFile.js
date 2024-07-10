@@ -292,15 +292,44 @@
 // Question 8_________________________________________________________________
 // Finding the longest prefix string
 
-function longestCommonPrefix(strs) {
-    let commonString = '';
-    let length = strs.length - 1;
+// function longestCommonPrefix(strs) {
+//     let commonString = '';
+//     let length = strs.length - 1;
 
-    for (let i = 0; i < strs.length; i++) {
-        for (let j = 0; j < strs.length; j++) {
-            2 + 2
-        }
+//     for (let i = 0; i < strs.length; i++) {
+//         for (let j = 0; j < strs.length; j++) {
+//             2 + 2
+//         }
+//     }
+// }
+
+
+
+// Question 9___________________________________________________
+// Reverse a String
+
+function reverse(str) {
+    if (typeof str !== 'string') {
+        return ('Not a String, Please try again')
+
     }
+
+    // split the string
+    let splitString = str.split('');
+
+    // loop through the split and reverse
+    let reversedSplitString = []
+    for (let i = splitString.length - 1; i >= 0; i--) {
+        reversedSplitString.push(splitString[i])
+    }
+    // console.log(reversedSplitString);
+
+    // join the string again
+    let joinedString = reversedSplitString.join('')
+
+    return joinedString
 }
+
+console.log(reverse([1, 2, 3]));
 
 
