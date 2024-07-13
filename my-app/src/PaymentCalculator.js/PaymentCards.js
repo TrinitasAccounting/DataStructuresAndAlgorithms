@@ -21,6 +21,10 @@ function PaymentCards({ paymentValues }) {
     // ]
 
 
+    // const date = moment("2018-05-18T04:00:00.000Z").format('DD MMM, YYYY');
+    // console.log(date);
+
+
     const data = []
     for (let i = 0; i < paymentValues.numberOfPayments; i++) {
         data.push({ date: paymentValues.purchaseDate, amount: paymentValues.amount })
