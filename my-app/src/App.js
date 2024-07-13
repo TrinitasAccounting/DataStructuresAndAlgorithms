@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import TimerAndClicks from './TimerAndClicks';
 import PaymentDataForm from './PaymentCalculator.js/PaymentDateForm';
+import PaymentCards from './PaymentCalculator.js/PaymentCards';
 
 import { useState } from 'react';
 
@@ -59,7 +60,14 @@ function App() {
     </div>)
   })
 
-  // console.log(listOfPayments);
+  // Calculation Values for Payments
+  const [paymentValues, setPaymentValues] = useState({
+    purchaseDate: '',
+    numberOfPayments: '',
+    amount: ''
+  })
+
+
 
   // Create two drop downs with the first selecting the country.And the second drop down updating to show the cities of the first dropdown. 
 
@@ -88,7 +96,10 @@ function App() {
       </div> */}
 
       <div>
-        <PaymentDataForm />
+        <PaymentDataForm paymentValues={paymentValues} setPaymentValues={setPaymentValues} />
+      </div>
+      <div>
+        <PaymentCards paymentValues={paymentValues} />
       </div>
     </div>
   );

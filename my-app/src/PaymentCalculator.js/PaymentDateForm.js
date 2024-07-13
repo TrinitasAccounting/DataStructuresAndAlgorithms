@@ -2,35 +2,37 @@
 import { useState } from 'react';
 
 
-function PaymentDataForm() {
+function PaymentDataForm({ paymentValues, setPaymentValues }) {
     const [paymentFormData, setPaymentFormData] = useState({
         puchaseDate: '',
         numberOfPayments: 4,
         amount: 100
     })
 
+    // Updating the form when the input box is changed
     function handleFormChange(event) {
         event.preventDefault()
         let newPaymentFormData = { ...paymentFormData, [event.target.name]: event.target.value }
-        // if (event.target.name === 'numberOfPayments' || event.target.name === 'amount') {
-        //     newPaymentFormData = { ...paymentFormData, [event.target.name]: Number(event.target.value) }
-        // }
-        // else {
-        //     newPaymentFormData = { ...paymentFormData, [event.target.name]: event.target.value }
-
-        // }
 
         setPaymentFormData(newPaymentFormData)
     };
 
-    console.log(paymentFormData);
+    // console.log(paymentFormData);
+
+    // Handle the submission of the form
+    function handleSubmit(event) {
+        event.preventDefault()
+        setPaymentValues((paymentValues) => paymentFormData)
+        // console.log(paymentValues)
+    };
+
 
 
 
 
     return (
         <>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label name='purchaseDate'>
                     Date of Purchase:
                     <input type="date" name="purchaseDate" value={paymentFormData.purchaseDate} onChange={handleFormChange} />
