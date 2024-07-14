@@ -1,4 +1,6 @@
 
+
+
 import Card from "./IndividualCard";
 import './CardDesign.css';
 

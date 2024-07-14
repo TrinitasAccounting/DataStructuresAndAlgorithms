@@ -12,7 +12,20 @@ function PaymentDataForm({ paymentValues, setPaymentValues }) {
     // Updating the form when the input box is changed
     function handleFormChange(event) {
         event.preventDefault()
-        let newPaymentFormData = { ...paymentFormData, [event.target.name]: event.target.value }
+        let newPaymentFormData = {};
+        if (event.target.name === 'purchaseDate') {
+            let year = event.target.value.slice(0, 4);
+            let month = event.target.value.slice(5, 7)
+            let day = event.target.value.slice(8, 10)
+            console.log(month)
+            // const date = new Date(event.target.value.splice(0,4), 10, 10);
+
+            newPaymentFormData = { ...paymentFormData, [event.target.name]: event.target.value }
+        }
+        else {
+            newPaymentFormData = { ...paymentFormData, [event.target.name]: event.target.value }
+        }
+
 
         setPaymentFormData(newPaymentFormData)
     };
