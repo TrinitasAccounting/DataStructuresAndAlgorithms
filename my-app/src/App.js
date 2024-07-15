@@ -3,6 +3,7 @@ import './App.css';
 import TimerAndClicks from './TimerAndClicks';
 import PaymentDataForm from './PaymentCalculator.js/PaymentDateForm';
 import PaymentCards from './PaymentCalculator.js/PaymentCards';
+import ButtonComponent from './ButtonComponent';
 
 import { useState } from 'react';
 
@@ -76,6 +77,7 @@ function App() {
       <header className="App-header">
 
       </header>
+      <ButtonComponent />
       <div>
         <select onChange={changeSelected}>
           {countriesLoop}
