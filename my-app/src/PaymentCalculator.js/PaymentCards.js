@@ -39,8 +39,9 @@ function PaymentCards({ paymentValues }) {
     const data = []
     let newDate = new Date(paymentValues.purchaseDate)
     let correctDate = addDays(newDate, 0)
+    let monthlyPayments = paymentValues.amount / paymentValues.numberOfPayments;
     for (let i = 0; i < paymentValues.numberOfPayments; i++) {
-        data.push({ date: correctDate.toISOString().slice(0, 10), amount: paymentValues.amount })
+        data.push({ date: correctDate.toISOString().slice(0, 10), amount: monthlyPayments })
         correctDate = addWeeks(newDate, 2)
     }
 
