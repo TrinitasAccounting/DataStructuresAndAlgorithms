@@ -26,22 +26,25 @@ function PaymentCards({ paymentValues }) {
     // const date = moment("2018-05-18T04:00:00.000Z").format('DD MMM, YYYY');
     // console.log(date);
 
-
-    const data = []
-    for (let i = 0; i < paymentValues.numberOfPayments; i++) {
-        data.push({ date: paymentValues.purchaseDate, amount: paymentValues.amount })
-    }
-
-    // Handling our dates and adding days to them
-    const newDate = new Date(paymentValues.purchaseDate)
-    console.log(newDate);
-
+    // Creating our data array and handling the date parsing_________________________
     function addWeeks(date, weeks) {
         date.setDate(date.getDate() + 7 * weeks);
         return date;
     }
+    function addDays(date, days) {
+        date.setDate(date.getDate() + days)
+        return date;
+    }
 
-    console.log(addWeeks(newDate, 1))
+    const data = []
+    let newDate = new Date(paymentValues.purchaseDate)
+    let correctDate = addDays(newDate, 0)
+    for (let i = 0; i < paymentValues.numberOfPayments; i++) {
+        data.push({ date: correctDate.toISOString().slice(0, 10), amount: paymentValues.amount })
+        correctDate = addWeeks(newDate, 2)
+    }
+
+    // _________________________________________________________________________
 
 
 
