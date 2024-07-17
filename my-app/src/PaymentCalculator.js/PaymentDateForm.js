@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function PaymentDataForm({ paymentValues, setPaymentValues }) {
     const [paymentFormData, setPaymentFormData] = useState({
-        puchaseDate: '',
+        purchaseDate: '',
         numberOfPayments: 4,
         amount: 100
     })
@@ -14,11 +14,12 @@ function PaymentDataForm({ paymentValues, setPaymentValues }) {
         event.preventDefault()
         let newPaymentFormData = {};
         if (event.target.name === 'purchaseDate') {
-            let year = event.target.value.slice(0, 4);
-            let month = event.target.value.slice(5, 7)
-            let day = event.target.value.slice(8, 10)
-            console.log(month)
+            // let year = event.target.value.slice(0, 4);
+            // let month = event.target.value.slice(5, 7)
+            // let day = event.target.value.slice(8, 10)
+            // console.log(month)
             // const date = new Date(event.target.value.splice(0,4), 10, 10);
+            // const date = new Date(paymentFormData.purchaseDate)
 
             newPaymentFormData = { ...paymentFormData, [event.target.name]: event.target.value }
         }
@@ -28,9 +29,25 @@ function PaymentDataForm({ paymentValues, setPaymentValues }) {
 
 
         setPaymentFormData(newPaymentFormData)
+
     };
 
+
+    // Handling our dates and adding days to them
+    // const newDate = new Date(paymentFormData.purchaseDate)
+    // console.log(newDate);
+
+    // function addWeeks(date, weeks) {
+    //     date.setDate(date.getDate() + 7 * weeks);
+    //     return date;
+    // }
+
+    // console.log(addWeeks(newDate, 1))
+
+
+
     // console.log(paymentFormData);
+
 
     // Handle the submission of the form
     function handleSubmit(event) {
