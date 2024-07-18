@@ -73,7 +73,7 @@ function App() {
   // Create two drop downs with the first selecting the country.And the second drop down updating to show the cities of the first dropdown. 
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: 'red' }}>
       <header className="App-header">
 
       </header>
@@ -96,12 +96,14 @@ function App() {
       {/* <div>
         <TimerAndClicks />
       </div> */}
+      <div className='parent-payment-div' >
 
-      <div>
-        <PaymentDataForm paymentValues={paymentValues} setPaymentValues={setPaymentValues} />
-      </div>
-      <div>
-        <PaymentCards paymentValues={paymentValues} />
+        <div>
+          <PaymentDataForm paymentValues={paymentValues} setPaymentValues={setPaymentValues} />
+        </div>
+        <div>
+          <PaymentCards paymentValues={paymentValues} />
+        </div>
       </div>
     </div>
   );

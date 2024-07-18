@@ -62,19 +62,34 @@ function PaymentDataForm({ paymentValues, setPaymentValues }) {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <label name='purchaseDate'>
-                    Date of Purchase:
-                    <input type="date" name="purchaseDate" value={paymentFormData.purchaseDate} onChange={handleFormChange} />
-                </label>
-                <label name='numberOfPayments'>
-                    # of Payments:
-                    <input type="number" name="numberOfPayments" value={paymentFormData.numberOfPayments} onChange={handleFormChange} />
-                </label>
-                <label name='amount'>
-                    Total Amount:
-                    <input type="number" name="amount" value={paymentFormData.amount} onChange={handleFormChange} />
-                </label>
+            <form onSubmit={handleSubmit} >
+
+                <div style={{ width: '200px' }}>
+                    <label name='purchaseDate'>
+                        Date of Purchase:
+                        <br /><input type="date" name="purchaseDate" value={paymentFormData.purchaseDate} onChange={handleFormChange} />
+                    </label>
+                </div>
+                <div>
+                    <label name='numberOfPayments'>
+                        # of Payments:
+                        <input type="number" name="numberOfPayments" value={paymentFormData.numberOfPayments} onChange={handleFormChange} />
+                    </label><br />
+
+                </div>
+                <div style={{ width: '100px' }}>
+                    <label name='amount'>
+                        Total Amount:
+                        <input type="number" name="amount" value={paymentFormData.amount} onChange={handleFormChange} />
+                    </label>
+
+                </div>
+                <fieldset style={{ width: '100px', height: '40px' }}>
+                    <label name='amount'>
+                        Total Amount:
+                        <input type="number" name="amount" value={paymentFormData.amount} onChange={handleFormChange} />
+                    </label>
+                </fieldset>
                 <input type="submit" value="Submit" />
             </form>
         </>

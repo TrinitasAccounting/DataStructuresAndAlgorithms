@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 } */
+
+
+
+.parent-payment-div {
+  background-color: burlywood;
+  width: 70%;
+  margin-inline: auto;
+}
