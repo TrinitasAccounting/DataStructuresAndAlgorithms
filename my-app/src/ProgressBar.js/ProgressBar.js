@@ -13,6 +13,7 @@ function ProgressBar() {
     })
 
     // handle input changes
+    let progressWidth = progress.value;
     function handleChange(event) {
         event.preventDefault()
         let newProgress = { ...progress, [event.target.name]: event.target.value }
@@ -22,12 +23,13 @@ function ProgressBar() {
         }
         else {
             setProgress(newProgress)
+            setTimeout(() => progressWidth = progress.value, 1000);
         }
 
     }
 
     // let progressWidthCalculation = progress.fullWidth * (progress.value / 100);
-    let progressWidth = `'${progress.value}%'`
+    // let progressWidth = `'${progress.value}%'`
 
 
 
@@ -53,7 +55,7 @@ function ProgressBar() {
             <div className='progress-bar-div'>
                 <h2 className='text-progress-large'>Progress Bar</h2>
                 <div className='progress-bar-back' >
-                    <div className='progress-bar-front' style={{ width: progress.value + '%' }}>
+                    <div className='progress-bar-front' style={{ width: progressWidth + '%' }}>
                         <h2 className='text-progress-bar-middle'>{progress.value}%</h2>
                     </div>
                 </div>
