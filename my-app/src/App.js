@@ -4,6 +4,7 @@ import TimerAndClicks from './TimerAndClicks';
 import PaymentDataForm from './PaymentCalculator.js/PaymentDateForm';
 import PaymentCards from './PaymentCalculator.js/PaymentCards';
 import ButtonComponent from './ButtonComponent';
+import ProgressBar from './ProgressBar.js/ProgressBar';
 
 import { useState } from 'react';
 
@@ -73,12 +74,12 @@ function App() {
   // Create two drop downs with the first selecting the country.And the second drop down updating to show the cities of the first dropdown. 
 
   return (
-    <div className="App" style={{ backgroundColor: 'red' }}>
+    <div className="App" style={{ backgroundColor: 'white' }}>
       <header className="App-header">
 
       </header>
-      <ButtonComponent />
-      <div>
+      {/* <ButtonComponent /> */}
+      {/* <div>
         <select onChange={changeSelected}>
           {countriesLoop}
 
@@ -90,7 +91,7 @@ function App() {
           {filteredCitiesList}
 
         </select>
-      </div>
+      </div> */}
 
 
       {/* <div>
@@ -99,11 +100,16 @@ function App() {
       <div className='parent-payment-div' >
 
         <div>
-          <PaymentDataForm paymentValues={paymentValues} setPaymentValues={setPaymentValues} />
+          {/* <PaymentDataForm paymentValues={paymentValues} setPaymentValues={setPaymentValues} /> */}
         </div>
         <div>
-          <PaymentCards paymentValues={paymentValues} />
+          {/* <PaymentCards paymentValues={paymentValues} /> */}
         </div>
+      </div>
+
+      <div>
+        <ProgressBar />
+
       </div>
     </div>
   );

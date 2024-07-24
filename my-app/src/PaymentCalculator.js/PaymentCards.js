@@ -47,6 +47,7 @@ function PaymentCards({ paymentValues }) {
 
     // _________________________________________________________________________
 
+    // console.log(newDate);
 
 
 
