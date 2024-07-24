@@ -53,7 +53,9 @@ function ProgressBar() {
             <div className='progress-bar-div'>
                 <h2 className='text-progress-large'>Progress Bar</h2>
                 <div className='progress-bar-back' >
-                    <div className='progress-bar-front' style={{ width: progress.value + '%' }}></div>
+                    <div className='progress-bar-front' style={{ width: progress.value + '%' }}>
+                        <h2 className='text-progress-bar-middle'>{progress.value}%</h2>
+                    </div>
                 </div>
             </div>
             <div className='input-text-div'>

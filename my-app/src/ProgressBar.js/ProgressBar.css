@@ -34,6 +34,16 @@
     background-image: linear-gradient(to right, #f2709c, #ff9472)
 }
 
+/* Center percentage value shown on the progress bar */
+.text-progress-bar-middle {
+    position: relative;
+    left: 40%;
+    color: white;
+    font-size: 22px;
+    font-weight: 200;
+    top: 15%;
+}
+
 /* Outer div that contains the input box and the input box text to explain */
 .input-text-div {
     position: absolute;
