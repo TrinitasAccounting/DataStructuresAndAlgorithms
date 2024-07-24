@@ -1,18 +1,37 @@
+/* Outer container holding the progress bar and the progress bar text */
+.progress-bar-div {
+    position: relative;
+    left: 40%;
+    top: 200px;
+    width: 600px;
+    margin-bottom: 0;
+}
+
+
+/* The text above the progress bar */
+.text-progress-large {
+    position: relative;
+    left: 22%;
+    font-size: 40px;
+}
+
 .progress-bar-back {
     background-color: gray;
-    height: 30px;
+    height: 40px;
     width: 500px;
     border-radius: 40px;
-    position: absolute;
+    /* position: absolute;
     top: 300px;
-    left: 40%;
+    left: 40%; */
+
 }
 
 .progress-bar-front {
-    background-color: pink;
+    /* background-color: pink; */
     height: 100%;
     /* width: 50%; */
     border-radius: 40px;
+    background-image: linear-gradient(to right, #f2709c, #ff9472)
 }
 
 /* Outer div that contains the input box and the input box text to explain */
@@ -37,6 +56,3 @@
     text-align: center;
     font-size: 18px;
 }
-
-/* The text above the progress bar */
-.text-progress-large {}
