@@ -5,6 +5,7 @@ import PaymentDataForm from './PaymentCalculator.js/PaymentDateForm';
 import PaymentCards from './PaymentCalculator.js/PaymentCards';
 import ButtonComponent from './ButtonComponent';
 import ProgressBar from './ProgressBar.js/ProgressBar';
+import ToDo from './ToDoComponent.js/ToDo';
 
 import { useState } from 'react';
 
@@ -107,10 +108,16 @@ function App() {
         </div>
       </div>
 
-      <div>
+      {/* Progress Bar challenge problem, attaches in the middle of the screen */}
+      {/* <div>
         <ProgressBar />
+      </div> */}
 
+      <div>
+        <ToDo />
       </div>
+
+
     </div>
   );
 }
