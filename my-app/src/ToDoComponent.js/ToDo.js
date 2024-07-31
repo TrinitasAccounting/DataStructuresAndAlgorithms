@@ -9,7 +9,7 @@ function ToDo() {
 
     // let toDoArray = ['item 1', 'item 2'];
 
-    const [toDoArray, setToDoArray] = useState(['item 1', 'item 2']);
+    const [toDoArray, setToDoArray] = useState(['Blackjack Backtest', 'Apply to jobs', 'Pray for our Heavenly Father\'s help']);
     const [newItem, setNewItem] = useState('');
 
     // handle change of the update to the input box
