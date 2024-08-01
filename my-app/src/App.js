@@ -7,7 +7,7 @@ import ButtonComponent from './ButtonComponent';
 import ProgressBar from './ProgressBar.js/ProgressBar';
 import ToDo from './ToDoComponent.js/ToDo';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const countries = [
   {
@@ -26,6 +26,16 @@ const countries = [
 
 
 function App() {
+
+  // Robo Picture State
+  // const [robot, setRobot] = useState('')
+
+  // GET fetch to get robo pictures   Note: This isnt a JSON fetch so really dont have an object to destructure and set as the state
+  // useEffect(() => {
+  //   fetch('https://robohash.org/4?set=set2&size=180x180')
+  //   .then(res => res.json())
+  //   .then(data => setRobot() )
+  // })
 
   const [selected, setSelected] = useState(countries[0].country)
   const [cities, setCities] = useState(countries[0].cities)
@@ -113,9 +123,9 @@ function App() {
         <ProgressBar />
       </div> */}
 
-      <div>
+      {/* <div>
         <ToDo />
-      </div>
+      </div> */}
 
 
     </div>
