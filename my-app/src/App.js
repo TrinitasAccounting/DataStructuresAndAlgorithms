@@ -6,6 +6,7 @@ import PaymentCards from './PaymentCalculator.js/PaymentCards';
 import ButtonComponent from './ButtonComponent';
 import ProgressBar from './ProgressBar.js/ProgressBar';
 import ToDo from './ToDoComponent.js/ToDo';
+import DoList from './DoListComponent/DoList';
 
 import { useState, useEffect } from 'react';
 
@@ -126,6 +127,10 @@ function App() {
       {/* <div>
         <ToDo />
       </div> */}
+
+      <div>
+        <DoList />
+      </div>
 
 
     </div>
